@@ -42,6 +42,7 @@ RUN git clone --single-branch --branch=v6.2.4-nem https://github.com/nemtech/roc
     cd rocksdb && \
      USE_RTTI=1 make install-shared
 
-RUN git clone --single-branch --branch=fix_break_fuzz https://github.com/Wayonb/catapult-server.git catapult-server
+RUN git clone --single-branch --branch=clang10_fuzz_target https://github.com/Wayonb/catapult-server.git catapult-server
 WORKDIR catapult-server
 COPY build.sh $SRC/
+COPY node_data/. $OUT/
