@@ -8,9 +8,7 @@ cmake_args+=("-DCMAKE_INSTALL_PREFIX=${OUT}")
 cmake_args+=("-DCMAKE_BUILD_TYPE=RelWithDebInfo")
 #cmake_args+=("-DUSE_KECCAK=TRUE")
 
-#
-#cmake_args+=("-DUSE_SANITIZER= sanitizer name ")
-#
+cmake_args+=("-DUSE_SANITIZER=undefined")
 
 cmake_args+=("-DENABLE_TESTS=OFF")
 cmake_args+=("-DENABLE_FUZZING=ON")
